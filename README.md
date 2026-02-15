@@ -1,4 +1,5 @@
 # RainbowMoon 🌈🌙
+ -> # Create a Good Life by Point & Line
 > [한 줄 소개: 예) Point & Line 철학을 기반으로 좋은 삶을 설계하는 프로젝트/플랫폼]
 
 ## What is this?
