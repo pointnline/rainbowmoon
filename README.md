@@ -1,10 +1,54 @@
 # RainbowMoon 🌈🌙
  -> # Create a Good Life by Point & Line
-> [한 줄 소개: 예) Point & Line 철학을 기반으로 좋은 삶을 설계하는 프로젝트/플랫폼]
+-->> RainbowMoon은 종이 다이어리와 AI를 연결하여
+“삶을 설계하는 운영체제”를 만드는 프로젝트입니다.
+
+------
 
 ## What is this?
 RainbowMoon은 **Point & Line** 철학(점=선택, 선=실행, 면=축적, 원=순환)을 기반으로  
-[사용자가 무엇을 할 수 있는지: 예) 기록/습관/회고/설계]를 돕는 [앱/서비스/툴]입니다.
+
+## 🧠 Philosophy
+
+Point → 선택  
+Line → 실행  
+Plane → 축적  
+Circle → 순환  
+
+RainbowMoon은 이 철학을
+오프라인 다이어리 + 웹앱 + AI 시스템으로 구현합니다.
+
+------
+
+## 🎯 Mission
+
+우리는 단순 기록 도구가 아니라  
+“목표를 구조화하고 실행을 데이터화하며  
+다시 설계하는 순환 시스템”을 만듭니다.
+
+---
+
+## 🚀 MVP Scope (Phase 1)
+
+- 목표 패키지 선택
+- 7 Moons 기반 만다라트 자동 생성
+- 종이 다이어리 촬영 → 구조화 데이터 변환
+- 실행 점수 대시보드
+- 다음 달 설계 PDF 출력
+
+------
+
+## 🛠 Core System
+
+Physical Diary  
+→ Scan  
+→ Structured Data  
+→ AI + Wisdom RAG  
+→ Personalized Redesign  
+→ Print  
+→ Back to Paper
+
+------
 
 ## Why?
 - **문제**: [예) 목표는 많은데 지속이 어렵다 / 기록이 쌓이지 않는다]
@@ -20,14 +64,14 @@ RainbowMoon은 **Point & Line** 철학(점=선택, 선=실행, 면=축적, 원=�
 ## Demo / Screenshots
 > 준비 중 (추가 예정)
 
-## Getting Started
-### Requirements
-- [Node.js ?] / [Python ?] / [Docker ?]
-- [기타]
+## 📅 Roadmap
 
-### Install
-```bash
-# 예시
-git clone https://github.com/pointnline/rainbowmoon.git
-cd rainbowmoon
-# npm install / pip install -r requirements.txt 등
+- Phase 1: Mandarat + OCR + Web MVP
+- Phase 2: Habit Score + AI Coaching
+- Phase 3: Mobile App
+
+------
+
+Built by Point & Line.
+
+
