@@ -1,0 +1,91 @@
+import type { Theme, MoonColor } from "@/types";
+
+export const THEMES: Record<"dark" | "light", Theme> = {
+  dark: {
+    bg: "#0a0a0f",
+    bgCard: "rgba(255,255,255,0.02)",
+    bgCardHover: "rgba(255,255,255,0.05)",
+    bgNav: "rgba(10,10,15,0.95)",
+    border: "rgba(255,255,255,0.06)",
+    borderHover: "rgba(255,255,255,0.15)",
+    text: "#ffffff",
+    textSecondary: "rgba(255,255,255,0.6)",
+    textMuted: "rgba(255,255,255,0.35)",
+    textFaint: "rgba(255,255,255,0.15)",
+    textUltraFaint: "rgba(255,255,255,0.08)",
+    accent: "#6C5CE7",
+    accentSecondary: "#A855F7",
+    selection: "rgba(108,92,231,0.3)",
+    scrollThumb: "rgba(255,255,255,0.08)",
+    barDefault: (i: number) => `rgba(255,255,255,${0.04 + (i / 30) * 0.08})`,
+    barWeekend: (i: number) => `rgba(168,85,247,${0.06 + (i / 30) * 0.06})`,
+    inputBg: "rgba(255,255,255,0.02)",
+    checkBg: "transparent",
+    checkBorder: "rgba(255,255,255,0.2)",
+    moonBgAlpha: "15",
+    moonBorderAlpha: "30",
+    orbitRing: (i: number) => `rgba(255,255,255,${0.03 + i * 0.01})`,
+    centerGlow: "rgba(108,92,231,0.08)",
+    heroGradient:
+      "linear-gradient(135deg, #fff 0%, rgba(168,85,247,0.8) 100%)",
+    ctaPrimary:
+      "linear-gradient(135deg, rgba(108,92,231,0.25), rgba(168,85,247,0.15))",
+    ctaPrimaryBorder: "rgba(108,92,231,0.3)",
+    ctaPrimaryHover:
+      "linear-gradient(135deg, rgba(108,92,231,0.4), rgba(168,85,247,0.25))",
+  },
+  light: {
+    bg: "#FAF8F5",
+    bgCard: "rgba(0,0,0,0.02)",
+    bgCardHover: "rgba(0,0,0,0.04)",
+    bgNav: "rgba(250,248,245,0.97)",
+    border: "rgba(0,0,0,0.07)",
+    borderHover: "rgba(0,0,0,0.15)",
+    text: "#1a1a2e",
+    textSecondary: "rgba(26,26,46,0.65)",
+    textMuted: "rgba(26,26,46,0.4)",
+    textFaint: "rgba(26,26,46,0.2)",
+    textUltraFaint: "rgba(26,26,46,0.08)",
+    accent: "#5B4DC7",
+    accentSecondary: "#8B5CF6",
+    selection: "rgba(91,77,199,0.15)",
+    scrollThumb: "rgba(0,0,0,0.1)",
+    barDefault: (i: number) => `rgba(26,26,46,${0.04 + (i / 30) * 0.06})`,
+    barWeekend: (i: number) => `rgba(139,92,246,${0.08 + (i / 30) * 0.06})`,
+    inputBg: "rgba(0,0,0,0.02)",
+    checkBg: "transparent",
+    checkBorder: "rgba(26,26,46,0.2)",
+    moonBgAlpha: "20",
+    moonBorderAlpha: "30",
+    orbitRing: (i: number) => `rgba(26,26,46,${0.04 + i * 0.02})`,
+    centerGlow: "rgba(91,77,199,0.06)",
+    heroGradient:
+      "linear-gradient(135deg, #1a1a2e 0%, rgba(91,77,199,0.9) 100%)",
+    ctaPrimary:
+      "linear-gradient(135deg, rgba(91,77,199,0.12), rgba(139,92,246,0.08))",
+    ctaPrimaryBorder: "rgba(91,77,199,0.2)",
+    ctaPrimaryHover:
+      "linear-gradient(135deg, rgba(91,77,199,0.2), rgba(139,92,246,0.15))",
+  },
+};
+
+export const MOON_COLORS: Record<"dark" | "light", MoonColor[]> = {
+  dark: [
+    { id: "red", label: "Passion", meaning: "열정 · 실행", area: "목표 · 성과", color: "#E8453C" },
+    { id: "orange", label: "Creation", meaning: "창조 · 아이디어", area: "만다라트", color: "#E8853C" },
+    { id: "yellow", label: "Joy", meaning: "긍정 · 감사", area: "감정일기", color: "#E8C93C" },
+    { id: "green", label: "Growth", meaning: "성장 · 재정", area: "습관 · 자산관리", color: "#4CAF7D" },
+    { id: "blue", label: "Focus", meaning: "집중 · 시스템", area: "목적달성표", color: "#4C8FAF" },
+    { id: "indigo", label: "Insight", meaning: "통찰 · 철학", area: "저널링", color: "#6C5CE7" },
+    { id: "violet", label: "Vision", meaning: "비전 · 영성", area: "비전보드", color: "#A855F7" },
+  ],
+  light: [
+    { id: "red", label: "Passion", meaning: "열정 · 실행", area: "목표 · 성과", color: "#C0392B" },
+    { id: "orange", label: "Creation", meaning: "창조 · 아이디어", area: "만다라트", color: "#D68910" },
+    { id: "yellow", label: "Joy", meaning: "긍정 · 감사", area: "감정일기", color: "#B7950B" },
+    { id: "green", label: "Growth", meaning: "성장 · 재정", area: "습관 · 자산관리", color: "#1E8449" },
+    { id: "blue", label: "Focus", meaning: "집중 · 시스템", area: "목적달성표", color: "#2874A6" },
+    { id: "indigo", label: "Insight", meaning: "통찰 · 철학", area: "저널링", color: "#5B4DC7" },
+    { id: "violet", label: "Vision", meaning: "비전 · 영성", area: "비전보드", color: "#7D3C98" },
+  ],
+};
