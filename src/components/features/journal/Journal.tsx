@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import type { JournalEntry } from "@/types";
 
 export function Journal() {
   const { theme, moons } = useTheme();
-  const [entries, setEntries] = useState<JournalEntry[]>([]);
+  const [entries, setEntries] = useLocalStorage<JournalEntry[]>("rm_journal", []);
   const [cur, setCur] = useState({ gratitude: "", reflection: "", mood: 3 });
   const moods = ["😔", "😐", "🙂", "😊", "✨"];
 

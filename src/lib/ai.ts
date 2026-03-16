@@ -48,6 +48,29 @@ export const MANDALART_FALLBACK = (goal: string) => ({
   ],
 });
 
+// ─── Moon AI 채팅 ───
+export interface ChatContext {
+  mandalartCenter?: string;
+  goals?: { title: string; progress: string }[];
+  habits?: { name: string; streak: number }[];
+  recentJournal?: { date: string; gratitude: string; reflection: string; mood: number }[];
+  visionCount?: number;
+}
+
+export async function sendChatMessage(
+  messages: { role: "user" | "assistant"; content: string }[],
+  context?: ChatContext
+): Promise<string> {
+  const res = await fetch("/api/ai", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ type: "chat", messages, context }),
+  });
+  if (!res.ok) throw new Error(`Chat failed: ${res.status}`);
+  const data = await res.json();
+  return data.message as string;
+}
+
 export const VISION_FALLBACK = (goal: string) => ({
   visions: [
     { text: `${goal}을 이룬 나의 모습`, query: "success achievement" },

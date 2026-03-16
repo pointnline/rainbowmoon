@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import type { Goal } from "@/types";
 
 export function Goals() {
   const { theme, moons } = useTheme();
-  const [goals, setGoals] = useState<Goal[]>([
+  const [goals, setGoals] = useLocalStorage<Goal[]>("rm_goals", [
     { id: 1, title: "", subgoals: [{ text: "", actions: [{ text: "", done: false }] }] },
   ]);
 

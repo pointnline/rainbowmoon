@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import type { Habit } from "@/types";
 
 export function Habits() {
   const { theme, moons } = useTheme();
   const today = new Date();
   const [viewDate, setViewDate] = useState(new Date(today.getFullYear(), today.getMonth(), 1));
-  const [habits, setHabits] = useState<Habit[]>([
+  const [habits, setHabits] = useLocalStorage<Habit[]>("rm_habits", [
     { id: 1, name: "명상 10분", color: moons[5].color, checkedDates: {} },
     { id: 2, name: "운동 30분", color: moons[0].color, checkedDates: {} },
     { id: 3, name: "독서 20페이지", color: moons[3].color, checkedDates: {} },

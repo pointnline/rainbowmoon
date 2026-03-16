@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { MANDALART_PACKAGES, buildCellsFromPackage } from "@/constants/mandalart-packages";
 import { generateMandalart, MANDALART_FALLBACK } from "@/lib/ai";
 
@@ -24,10 +25,10 @@ export function Mandalart() {
   const { theme, moons } = useTheme();
 
   // ─── 상태 ───
-  const [cells, setCells] = useState<string[]>(Array(81).fill(""));
+  const [cells, setCells] = useLocalStorage<string[]>("rm_mandalart_cells", Array(81).fill(""));
   const [sel, setSel] = useState<number | null>(null);
   const [showPackages, setShowPackages] = useState(true);
-  const [activePackage, setActivePackage] = useState<string | null>(null);
+  const [activePackage, setActivePackage] = useLocalStorage<string | null>("rm_mandalart_package", null);
   const [showAI, setShowAI] = useState(false);
   const [aiGoal, setAiGoal] = useState("");
   const [aiLoading, setAiLoading] = useState(false);

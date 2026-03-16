@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import type { VisionItem } from "@/types";
 import { VISION_PACKAGES } from "@/constants/vision-packages";
 import { generateVision, VISION_FALLBACK } from "@/lib/ai";
 
 export function VisionBoard() {
   const { theme, moons } = useTheme();
-  const [items, setItems] = useState<VisionItem[]>([]);
+  const [items, setItems] = useLocalStorage<VisionItem[]>("rm_vision_items", []);
   const [showAdd, setShowAdd] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<{ id: string; url: string; thumb: string }[]>([]);

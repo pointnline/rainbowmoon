@@ -12,6 +12,7 @@ import { Goals } from "@/components/features/goals/Goals";
 import { Habits } from "@/components/features/habits/Habits";
 import { Journal } from "@/components/features/journal/Journal";
 import { VisionBoard } from "@/components/features/vision/VisionBoard";
+import { MoonChat } from "@/components/layout/MoonChat";
 import type { PageId } from "@/types";
 
 function AppContent() {
@@ -52,6 +53,7 @@ function AppContent() {
         input::placeholder, textarea::placeholder { color: ${theme.textFaint} !important; }
       `}</style>
       <CosmicBackground />
+      <MoonChat />
       <div style={{ position: "relative", zIndex: 1, display: "flex", minHeight: "100vh" }}>
         <NavBar page={page} setPage={setPage} />
         <main style={{ marginLeft: 72, flex: 1, minHeight: "100vh", overflowY: "auto" }}>
