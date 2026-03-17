@@ -6,9 +6,7 @@ import type { Goal } from "@/types";
 
 export function Goals() {
   const { theme, moons } = useTheme();
-  const [goals, setGoals] = useLocalStorage<Goal[]>("rm_goals", [
-    { id: 1, title: "", subgoals: [{ text: "", actions: [{ text: "", done: false }] }] },
-  ]);
+  const [goals, setGoals] = useLocalStorage<Goal[]>("rm_goals", []);
 
   const getProgress = (g: Goal) => {
     const a = g.subgoals.flatMap((s) => s.actions);

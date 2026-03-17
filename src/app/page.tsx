@@ -56,7 +56,7 @@ function AppContent() {
       <MoonChat />
       <div style={{ position: "relative", zIndex: 1, display: "flex", minHeight: "100vh" }}>
         <NavBar page={page} setPage={setPage} />
-        <main style={{ marginLeft: 72, flex: 1, minHeight: "100vh", overflowY: "auto" }}>
+        <main style={{ marginLeft: 80, flex: 1, minHeight: "100vh", overflowY: "auto" }}>
           {renderPage()}
         </main>
       </div>

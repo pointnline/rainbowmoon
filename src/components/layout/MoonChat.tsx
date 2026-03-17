@@ -72,6 +72,13 @@ export function MoonChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // NavBar moonchat:toggle 이벤트 리스너
+  useEffect(() => {
+    const handler = () => setIsOpen((o) => !o);
+    window.addEventListener("moonchat:toggle", handler);
+    return () => window.removeEventListener("moonchat:toggle", handler);
+  }, []);
+
   // 패널 열림 애니메이션
   useEffect(() => {
     if (isOpen) {
